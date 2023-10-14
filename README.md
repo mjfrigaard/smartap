@@ -1,5 +1,7 @@
 # smartap
 
+This is a shiny app-package conversion of the [SMARTApp](kcvi.shinyapps.io/START/). The original application files are in the source [repo](https://github.com/jminnier/STARTapp/tree/master).
+
 ## Previous README
 
 ~~~
@@ -7,22 +9,22 @@
 
 This is the code to run the app described in the manuscript: 
 
-[Nelson, JW, Sklenar J, Barnes AP, Minnier J. (2016) "The START App: A Web-Based RNAseq Analysis and Visualization Resource." Bioinformatics.  doi: 10.1093/bioinformatics/btw624.](http://bioinformatics.oxfordjournals.org/content/early/2016/09/27/bioinformatics.btw624.abstract)
+[Nelson, JW, Sklenar J, Barnes AP, Minnier J. (2016) "The START App: A Web-BasedRNAseq Analysis and Visualization Resource." Bioinformatics.  doi: 10.1093/bioinformatics/btw624.](http://bioinformatics.oxfordjournals.org/content/early/2016/09/27/bioinformatics.btw624.abstract)
 
 The app is hosted on Shinyapps.io here:
 <https://kcvi.shinyapps.io/START/>
 
-To run this app locally on your machine, download R or RStudio and run the following commands once to set up the environment:
-```
+To run this app locally on your machine, download R or RStudio and run the 
+following commands once to set up the environment:
 
-install.packages(c("reshape2","ggplot2","ggthemes","gplots","ggvis","dplyr","tidyr","DT", "readr",
-                   "RColorBrewer","pheatmap","shinyBS","plotly","janitor",
-                   "markdown","NMF","scales","heatmaply"))
+```r
+install.packages(c("reshape2","ggplot2","ggthemes","gplots","ggvis","dplyr", 
+"tidyr","DT", "readr","RColorBrewer","pheatmap","shinyBS","plotly","janitor",
+"markdown","NMF","scales","heatmaply"))
 ## try http:// if https:// URLs are not supported
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 BiocManager::install(c("limma","edgeR"))
-
 ```
 
 You may now run the shiny app with just one command in R:
