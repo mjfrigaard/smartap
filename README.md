@@ -1,23 +1,150 @@
+# smartap
+
+This is a shiny app-package conversion of the [SMARTApp](kcvi.shinyapps.io/START/). The original application files are in the source [repo](https://github.com/jminnier/STARTapp/tree/master).
+
+## `main`
+
+Package creation with `usethis::create_package('smartap')`.
+
+## `01_app-files` branch
+
+This branch contains the files in their respective folders: 
+
+### `R/`
+
+All .R files have been moved to `R/`
+
+```bash
+R/
+├── fun-analysisres.R
+├── fun-analyzecounts.R
+├── fun-dotplot.R
+├── fun-groupplots.R
+├── fun-heatmap.R
+├── fun-input-analyze-data.R
+├── helpers.R
+├── save_example_data.R
+├── server-analysisres.R
+├── server-data.R
+├── server-dotplot.R
+├── server-filterdata.R
+├── server-heatmap.R
+├── server-inputdata.R
+├── server-samplegroupplots.R
+├── server.R
+├── ui-tab-analysisres.R
+├── ui-tab-dotplot.R
+├── ui-tab-filterdata.R
+├── ui-tab-heatmap.R
+├── ui-tab-help.R
+├── ui-tab-inputdata.R
+├── ui-tab-landing.R
+├── ui-tab-news.R
+├── ui-tab-samplegroupplots.R
+├── ui-tab-terms.R
+└── ui.R
+
+1 directory, 27 files
+```
+
+### `inst/`
+
+```bash
+inst/
+├── extdata/
+│   ├── exampleanalysisres_short.csv
+│   ├── examplecounts_short.csv
+│   ├── mousecounts_example.csv
+│   ├── mousecounts_example_analyzed.csv
+│   ├── testdata_analyzed_onecomparison.csv
+│   ├── testdata_counts_onegroup.csv
+│   ├── testdata_counts_onerep.csv
+│   ├── testdata_counts_prot.csv
+│   └── testdata_noncounts.csv
+├── src/
+│   └── google-analytics.js
+└── www/
+    ├── app.css
+    ├── bootstrap.min.united.updated.css
+    ├── ex_click_rdata.png
+    ├── exampleanalysisdata.png
+    ├── examplecounts.png
+    ├── explot_boxplot.png
+    ├── explot_heatmap.png
+    ├── explot_pca.png
+    └── explot_volcano.png
+    
+4 directories, 19 files
+```
+
+### `inst/extdata/`
+
+Contains .csv files
+
+### `inst/src/`
+
+Contains .js file
+
+### `inst/www/`
+
+Contains app external resources 
+
+### `data/`
+
+```bash
+data
+├── mousecounts_example.RData
+├── mousecounts_example_analysis_results.RData
+├── mousecounts_example_analysis_results_old.RData
+├── mousecounts_example_analyzed.RData
+└── testdata_counts_prot_uploaded.RData
+
+1 directory, 5 files
+````
+
+### `man/`
+
+```bash
+man
+└── figures
+    ├── ex_click_rdata.png
+    ├── exampleanalysisdata.png
+    ├── examplecounts.png
+    ├── explot_boxplot.png
+    ├── explot_heatmap.png
+    ├── explot_pca.png
+    └── explot_volcano.png
+
+2 directories, 7 files
+```
+
+### `man/figures/`
+
+Contains images from instructions
+
+## Previous README
+
+~~~
 # START App
 
 This is the code to run the app described in the manuscript: 
 
-[Nelson, JW, Sklenar J, Barnes AP, Minnier J. (2016) "The START App: A Web-Based RNAseq Analysis and Visualization Resource." Bioinformatics.  doi: 10.1093/bioinformatics/btw624.](http://bioinformatics.oxfordjournals.org/content/early/2016/09/27/bioinformatics.btw624.abstract)
+[Nelson, JW, Sklenar J, Barnes AP, Minnier J. (2016) "The START App: A Web-BasedRNAseq Analysis and Visualization Resource." Bioinformatics.  doi: 10.1093/bioinformatics/btw624.](http://bioinformatics.oxfordjournals.org/content/early/2016/09/27/bioinformatics.btw624.abstract)
 
 The app is hosted on Shinyapps.io here:
 <https://kcvi.shinyapps.io/START/>
 
-To run this app locally on your machine, download R or RStudio and run the following commands once to set up the environment:
-```
+To run this app locally on your machine, download R or RStudio and run the 
+following commands once to set up the environment:
 
-install.packages(c("reshape2","ggplot2","ggthemes","gplots","ggvis","dplyr","tidyr","DT", "readr",
-                   "RColorBrewer","pheatmap","shinyBS","plotly","janitor",
-                   "markdown","NMF","scales","heatmaply"))
+```r
+install.packages(c("reshape2","ggplot2","ggthemes","gplots","ggvis","dplyr", 
+"tidyr","DT", "readr","RColorBrewer","pheatmap","shinyBS","plotly","janitor",
+"markdown","NMF","scales","heatmaply"))
 ## try http:// if https:// URLs are not supported
 if (!requireNamespace("BiocManager", quietly = TRUE))
   install.packages("BiocManager")
 BiocManager::install(c("limma","edgeR"))
-
 ```
 
 You may now run the shiny app with just one command in R:
@@ -77,3 +204,5 @@ Love MI, Huber W, and Anders S (2014). Moderated
 # DOI
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.160626.svg)](https://doi.org/10.5281/zenodo.160626)
+
+~~~
