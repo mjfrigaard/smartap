@@ -1,0 +1,11 @@
+Package: smartap
+Type: Package
+Title: Shiny App-Package for SMARTApp
+Version: 0.1.0
+Author: Jessica Minnier <minnier@ohsu.edu> [aut, cre]
+Maintainer: Martin Frigaard <mjfrigaard@pm.me>
+Description: The START App: a web-based RNAseq analysis and visualization 
+  resource
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
