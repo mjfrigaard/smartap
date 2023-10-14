@@ -120,7 +120,23 @@ man
 
 ### `man/figures/`
 
-Contains images from instructions
+Contains images from `instructions/` (these will be vignettes).
+
+### `tests/`
+
+Testing script has been moved inside `tests/`
+
+```bash
+tests
+├── countdata_edgeR.R
+└── tests.R
+
+1 directory, 2 files
+```
+
+## To-Do
+
+- [ ] convert contents of `instructions/` to vignettes in `vignettes/`
 
 ## Previous README
 
